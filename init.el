@@ -23,7 +23,10 @@
     ;; Disable the bars
         (scroll-bar-mode -1)
         (tool-bar-mode -1)
-        (menu-bar-mode -1) 
+        (menu-bar-mode -1)
+    ;; Disable startup buffers
+        (setq inhibit-splash-screen t)
+        (setq inhibit-startup-message t)
 
 ;; Packages
     (package-initialize)
@@ -35,8 +38,9 @@
     ;; rjsx-mode (react)
         (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
     ;; ido-mode
-        (ido-mode t)
         (require 'ido)
+        (ido-mode t)
+        (setq ido-separator "\n")
         (setq ido-enable-flex-matching t)
 
 ;; Interface packages
@@ -44,16 +48,3 @@
     (require 'all-the-icons)
     (global-set-key [f8] 'neotree-toggle)
     (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-
-
-
-
-
-
-
-
-;; Required package names
-;; solarized-theme
-;; rjsx-mode
-;; neotree
-;; all-the-icons        !!!! ---> after which run M-x all-the-icons-install-fonts
