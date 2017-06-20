@@ -44,6 +44,13 @@
         (setq ido-enable-flex-matching t)
     ;; linum mode
         (global-linum-mode 1)
+    ;; flycheck
+        (global-flycheck-mode)
+    ;; web-mode
+        (web-mode)
+    ;; auto-complete-mode
+        (require 'auto-complete-config)
+        (ac-config-default)
 
 ;; Interface packages
     (require 'neotree)
