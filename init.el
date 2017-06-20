@@ -19,27 +19,31 @@
 
 
 ;; Init Confs
-(setq apropos-sort-by-scores t)
+    (setq apropos-sort-by-scores t)
+    ;; Disable the bars
+        (scroll-bar-mode -1)
+        (tool-bar-mode -1)
+        (menu-bar-mode -1) 
 
 ;; Packages
-(package-initialize)
+    (package-initialize)
 
 ;; themes
-(load-theme 'solarized-dark t)
+    (load-theme 'solarized-dark t)
 
 ;; Modes
-;; rjsx-mode (react)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
-;; ido-mode
-(ido-mode t)
-(require 'ido)
-(setq ido-enable-flex-matching t)
+    ;; rjsx-mode (react)
+        (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+    ;; ido-mode
+        (ido-mode t)
+        (require 'ido)
+        (setq ido-enable-flex-matching t)
 
 ;; Interface packages
-(require 'neotree)
-(require 'all-the-icons)
-(global-set-key [f8] 'neotree-toggle)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+    (require 'neotree)
+    (require 'all-the-icons)
+    (global-set-key [f8] 'neotree-toggle)
+    (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 
 
