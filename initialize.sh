@@ -58,8 +58,8 @@ fileTextStyling(){
 if (!(which "emacs"))
 then
     err;
-    echo "emacs is NOT installed.";
-    echo "install emacs and run the script again.";
+    echo "Emacs is NOT installed.";
+    echo "Install emacs and run the script again.";
     reset;
     exit 1;
 fi

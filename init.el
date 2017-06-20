@@ -42,6 +42,8 @@
         (ido-mode t)
         (setq ido-separator "\n")
         (setq ido-enable-flex-matching t)
+    ;; linum mode
+        (global-linum-mode 1)
 
 ;; Interface packages
     (require 'neotree)
