@@ -1,6 +1,7 @@
 #!/usr/bin/emacs --script
 
-(load-file '"~/.emacs.d/init.el")
+(require 'package)
+(package-initialize)
 
 (package-refresh-contents)
 
